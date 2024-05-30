@@ -2,7 +2,7 @@
 Second Module Assement For MetaCrafters ETH + AVAX PROOF: Intermediate EVM Course
 
 # Description
-The Assessment contract is a simple banking contract that allows the owner to deposit, withdraw, and transfer funds. The contract has three main functions: deposit, withdraw, and transfer. The contract uses require statements to ensure that the sender is the owner and that the balance is sufficient for the requested withdrawal. The contract also uses assert statements to ensure that the balance is updated correctly. The app also include a Calculate factorial which calculate the factorial of the given amount.
+The Assessment contract is a simple smart contract named Assessment that manages a collection of books. The contract uses a struct Book to represent each book, with two properties: title and author.
 
 # Technology Used
 This project utilizes the following technologies:
@@ -42,20 +42,24 @@ This project utilizes the following technologies:
 6. Click on "Import" to import the account into MetaMask.
 7. Repeat the above steps to add more accounts for testing purposes.
 
-# Events
-* Deposit: Emitted when a deposit is made, with the deposited amount as an argument.
-* Withdraw: Emitted when a withdrawal is made, with the withdrawn amount as an argument.
-* Transfer: Emitted when a transfer is made, with the recipient address and transferred amount as arguments.
-
-# Constructor
-* This is a special function that is executed only once when the contract is deployed. It initializes the owner and balance state variables.
+# Contract Overview
+The Assessment contract provides functionalities to:
+* Add a new book with a title and author.
+* Retrieve the details of a book using its ID.
 
 # Functions
-* getBalance(): This is a view function that returns the current balance of the contract.
-* deposit(uint256 _amount): This is a payable function that allows the owner to deposit funds into the contract.
-* withdraw(uint256 _withdrawAmount): This function allows the owner to withdraw funds from the contract.
-* transfer(address payable _to, uint256 _amount): This function allows the owner to transfer funds to another address.
-* Error: This is a custom error that is used when the balance is insufficient to perform a withdrawal or transfer.
+* addBook(string memory title, string memory author) public: Adds a new book to the collection.
+
+# Parameters:
+* title (string): The title of the book.
+* author (string): The author of the book.
+* getBook(uint bookId) public view returns (string memory, string memory): Retrieves the details of a book by its ID.
+
+# Parameters:
+* bookId (uint): The ID of the book.
+* title (string): The title of the book.
+* author (string): The author of the book.
+* Requires the bookId to be within the range of existing books.
 
 # Authors
 Keana Aliza C. Perez
