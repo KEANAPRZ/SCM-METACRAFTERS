@@ -2,7 +2,7 @@
 Second Module Assement For MetaCrafters ETH + AVAX PROOF: Intermediate EVM Course
 
 # Description
-The Assessment contract is a simple smart contract named Assessment that manages a collection of books. The contract uses a struct Book to represent each book, with two properties: title and author.
+This is a Solidity smart contract for managing a collection of books and handling deposits and withdrawals of funds. The contract includes functionalities for adding books, retrieving book details, and managing the contract balance.
 
 # Technology Used
 This project utilizes the following technologies:
@@ -42,24 +42,12 @@ This project utilizes the following technologies:
 6. Click on "Import" to import the account into MetaMask.
 7. Repeat the above steps to add more accounts for testing purposes.
 
-# Contract Overview
-The Assessment contract provides functionalities to:
-* Add a new book with a title and author.
-* Retrieve the details of a book using its ID.
+# Features
+* Owner Managed: Only the owner can deposit and withdraw funds.
+* Book Management: Add and retrieve details of books.
+* Event Emissions: Emits events for deposits and withdrawals.
 
-# Functions
-* addBook(string memory title, string memory author) public: Adds a new book to the collection.
 
-# Parameters:
-* title (string): The title of the book.
-* author (string): The author of the book.
-* getBook(uint bookId) public view returns (string memory, string memory): Retrieves the details of a book by its ID.
-
-# Parameters:
-* bookId (uint): The ID of the book.
-* title (string): The title of the book.
-* author (string): The author of the book.
-* Requires the bookId to be within the range of existing books.
 
 # Authors
 Keana Aliza C. Perez
